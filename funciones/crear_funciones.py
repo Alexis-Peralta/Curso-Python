@@ -64,4 +64,20 @@ def desarrollador():
     else:
         print('No eres un desarrollador')
         
-desarrollador()
+# desarrollador()
+
+# crear una funcion que retorne un valor
+
+def crear_contraseña_random(num):
+    letras = 'abcdefghij'
+    num_entero = str(num)
+    num = int(num_entero[0])
+    c1 = num - 2
+    c2 = num
+    c3 = num - 5
+    contraseña= f"{letras[c1]}{letras[c2]}{letras[c3]}{num * 2}"
+    return contraseña, num
+    
+password = crear_contraseña_random(489)
+frase = f'Tu contraseña es: {password}'
+print(frase)
